@@ -1,1 +1,13 @@
-hi
+version: '3.8'
+
+services:
+  lobe-chat:
+    image: lobehub/lobe-chat
+    container_name: lobe-chat
+    restart: always
+    ports:
+      - '3210:3210'
+    environment:
+      OPENAI_API_KEY: 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
+      OPENAI_PROXY_URL: https://openrouter.ai/api/v1
+      ACCESS_CODE: lobe66
